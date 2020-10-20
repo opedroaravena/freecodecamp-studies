@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Animations</title>
+    <style>
+      div {
+        height: 40px;
+        width: 70%;
+        background: black;
+        margin: 50px auto;
+        border-radius: 2px;
+        position: relative;
+      }
+
+      #rect {
+        animation-name: rainbow;
+        animation-duration: 10s;
+      }
+
+      /* As shown in the example below, you can push the item downwards then upwards by setting the
+     top property of the 50% keyframe to 50px, but having it set to 0px for the first 
+     (0%) and the last (100%) keyframe. */
+
+      @keyframes rainbow {
+        0% {
+          background-color: blue;
+          left: 0px;
+        }
+        50% {
+          background-color: purple;
+          left: 25px;
+        }
+        100% {
+          background-color: white;
+          left: -25px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="rect"></div>
+  </body>
+</html>
